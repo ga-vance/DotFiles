@@ -1,3 +1,6 @@
+#alias vim="nvim"
+#alias python="python3"
+
 # Create directories recursively
 alias mkdir="mkdir -pv"
 
