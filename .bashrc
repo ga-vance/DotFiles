@@ -9,6 +9,7 @@
 
 #alias vim="nvim"
 #alias python="python3"
+#alias pip="pip3"
 
 # Create directories recursively
 alias mkdir="mkdir -pv"
