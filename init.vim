@@ -1,4 +1,18 @@
 
+call plug#begin('~/.vim/plugged')
+Plug 'sheerun/vim-polyglot'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
+Plug 'GlennLeo/cobalt2'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' } "Available options tokyonight-[night, storm, day, moon]
+Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'relastle/bluewery.vim'
+Plug 'vim-scripts/AutoComplPop'  " Autocomplete menu popup
+"Plug 'ThePrimeagen/vim-be-good'
+"Plug 'preservim/nerdtree'
+call plug#end()
+
 set encoding=utf-8
 set cursorline
 set lazyredraw
@@ -28,23 +42,6 @@ set wildmode=list:longest,full
 set termguicolors
 set spelllang=en
 
- " Auto Install if not currently present
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'relastle/bluewery.vim'
-Plug 'vim-scripts/AutoComplPop'  " Autocomplete menu popup
-"Plug 'ThePrimeagen/vim-be-good'
-"Plug 'preservim/nerdtree'
-call plug#end()
 
 " AutoComplete settings
 set complete+=kspell
@@ -55,7 +52,7 @@ set shortmess+=c
 syntax enable
 syntax on
 set background=dark
-colorscheme gruvbox
+colorscheme tokyonight
 
 let mapleader = " "
 
