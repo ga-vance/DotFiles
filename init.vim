@@ -5,6 +5,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
 Plug 'GlennLeo/cobalt2'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' } "Available options tokyonight-[night, storm, day, moon]
+"Plug 'ghifarit53/tokyonight-vim' "For Vim
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'relastle/bluewery.vim'
