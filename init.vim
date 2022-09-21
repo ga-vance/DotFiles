@@ -49,6 +49,8 @@ set complete+=kspell
 set completeopt=menuone,longest
 set shortmess+=c
 
+"let g:tokyonight_style = 'night' " available: night, storm
+"let g:tokyonight_enable_italic = 1
 
 syntax enable
 syntax on
