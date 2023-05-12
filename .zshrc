@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 setopt NO_CASE_GLOB
 setopt AUTO_CD
 setopt CORRECT
@@ -13,16 +20,20 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
+# Antigen package manager
+source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
 
-source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+antigen theme romkatv/powerlevel10k
+
+antigen apply
 
 # Shopt for bash
-#shopt -s autocd
-#shopt -s cdspell # autocorrects cd misspellings
-#shopt -s expand_aliases # expand aliases
+# shopt -s autocd
+# shopt -s cdspell # autocorrects cd misspellings
+# shopt -s expand_aliases # expand aliases
 
 # Case insensitive completion for zsh
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
@@ -69,3 +80,7 @@ up () {
 }
 
 [ -f "/Users/gregory/.ghcup/env" ] && source "/Users/gregory/.ghcup/env" # ghcup-env
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
