@@ -2,6 +2,7 @@
 #shopt -s autocd # change to named directory
 #shopt -s cdspell # autocorrects cd misspellings
 #shopt -s expand_aliases # expand aliases
+#shopt -s nocaseglob
 #bind -s 'set completion-ignore-case on'
 
 # Case insensitive completion for zsh
@@ -15,8 +16,10 @@
 alias mkdir="mkdir -pv"
 
 # Listing options
-alias ls="ls -h --color=auto"
-alias la="ls -lAh --color=auto"
+alias ll='ls -alF'
+alias la='ls -lAh'
+alias l='ls -CF'
+alias ls="ls -h"
 
 # Confirm before overwriting files
 alias cp="cp -i"
