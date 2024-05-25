@@ -3,6 +3,11 @@ vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights
 -- Move highlighted blocks
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- Tab in and out
+vim.keymap.set("n", "<Tab>", ":><CR>")
+vim.keymap.set("n", "<S-Tab>", ":<<CR>")
+vim.keymap.set("v", "<Tab>", ":><CR>gv")
+vim.keymap.set("v", "<S-Tab>", ":<<CR>gv")
 
 -- Causes next line to append to end of current line, but keeps cursor in same spot
 vim.keymap.set("n", "J", "mzJ`z")

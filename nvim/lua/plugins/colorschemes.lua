@@ -1,19 +1,19 @@
-return { 
+return {
     {
-    "catppuccin/nvim", 
-    name = "catppuccin", 
-    priority = 1000, 
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
     config = function()
         vim.cmd.colorscheme "catppuccin" --frappe, latte, macchiato, mocha are variants
     end
-    }, 
+    },
     {
     "loctvl842/monokai-pro.nvim",
     config = function()
         require("monokai-pro").setup()
         -- vim.cmd.colorscheme "monokai-pro" --classic, default, machine, octagon, ristretto, sprctrum are variants
     end
-    }, 
+    },
     {
         "sainnhe/everforest",
         config = function()
@@ -26,12 +26,12 @@ return {
             -- vim.cmd[[colorscheme nord]]
         end
     },
-    { 
-        'rose-pine/neovim', 
+    {
+        'rose-pine/neovim',
         name = 'rose-pine',
         config = function()
             require('rose-pine').setup()
-            -- vim.cmd.colorscheme "rose-pine" --dawn, moon are variants, 
+            -- vim.cmd.colorscheme "rose-pine" --dawn, moon are variants,
         end
     },
     {
